@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <img src="/src/assets/icons/linkedin-white.svg" alt="linked in" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/src/assets/logo-white.png" alt="Logo" />
+      <section class="navBtns">
+        <label for="searchCheckbox">
+          <input type="checkbox" id="searchCheckbox" />
+          <img
+            class="navBtn search"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasBottom"
+            aria-controls="offcanvasBottom"
+            src="/src/assets/icons/search.svg"
+            alt="search icon"
+          />
+        </label>
+        <img
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+          class="navBtn"
+          src="/src/assets/icons/burger-menu.svg"
+          alt="burger menu"
+        />
+      </section>
+    </header>
+    <!-- Button trigger modal -->
+    <button type="button" data-bs-toggle="modal" data-bs-target="#Modal">Launch demo modal</button>
+
+    <!-- Modal -->
+    <div class="modal" id="Modal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">...</div>
+        </div>
+      </div>
+    </div>
+    <!--start offcanvas search-->
+    <div
+      class="offcanvas offcanvas-bottom"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasBottom"
+      aria-labelledby="offcanvasBottomLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvasBody">
+        <div class="searchDiv">
+          <img src="/src/assets/icons/search.svg" alt="" />
+          <input id="searchData" type="search" onkeyup="search()" placeholder="search" />
+        </div>
+        <hr class="lighterHr" />
+
+        <section id="searchCanvas" class="searchOffCanvasContent">
+          <div>
+            <h5>TeesttWonderful Copenhagen 2021</h5>
+            <span>Published 12/07/2021</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nemo ipsam earum quam, in amet, nobis
+              corrupti
+            </p>
+            <hr />
+          </div>
+          <div>
+            <h5>Wonderful Copenhagen 2021</h5>
+            <span>Published 12/07/2021</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nemo ipsam earum quam, in amet, nobis
+              corruptiTeesttt
+            </p>
+            <hr />
+          </div>
+          <div>
+            <h5>Wonderful CopenhaTeatttgen 2021</h5>
+            <span>Published 12/07/2021</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nemo ipsam earum quam, in amet, nobis
+              corrupti
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!--end offcanvas search-->
+    <!--start offcanvas burger menu-->
+    <div class="offCanvasContainer">
+      <div
+        class="offcanvas offcanvas-end"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        tabindex="-1"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-body">
+          <a class="hover-underline-animation" href="#">About us</a>
+          <a class="hover-underline-animation" href="#">Events</a>
+          <a class="hover-underline-animation" href="#">Noric roaster</a>
+          <a class="hover-underline-animation" href="#">Results</a>
+          <a class="hover-underline-animation" href="#">Links</a>
+          <a class="hover-underline-animation" href="#">Contact</a>
+          <section class="someOffCanvas">
+            <img src="/src/assets/icons/linkedin-white.svg" alt="linked in" />
+            <img src="/src/assets/icons/twitter-white.svg" alt="twitter" />
+            <img src="/src/assets/icons/instagram-white.svg" alt="instagram" />
+            <img src="/src/assets/icons/facebook-white.svg" alt="facebook" />
+          </section>
+        </div>
+      </div>
+      <!--end offcanvas burger menu-->
+    </div>
+
+    <!--carousel-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            src="/src/assets/images/posts/nathan-dumlao-KixfBEdyp64-unsplash.jpg"
+            alt="First slide"
+          />
+        </div>
+
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/src/assets/images/posts/emre-NZMeJsrMC8U-unsplash.jpg" alt="Second slide" />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="/src/assets/images/posts/nolan-issac-It0DCaCBr40-unsplash.jpg"
+            alt="Third slide"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span>Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--carousel-->
+    <div class="quote">
+      <p>
+        &#10075;&#10075;To create an environment in which knowledge about coffe and uts sphere can be
+        obtained&#10076;&#10076;
+      </p>
+    </div>
+
+    <!--posts-->
+    <section class="post">
+      <img src="/src/assets/images/posts/Post thumbnail-1.png" class="thumbnailPic" alt="Post thumbnail" />
+      <h5>Wonderful Copenhagen 2021</h5>
+      <p class="fadedText">Published 12/07/2021</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nemo ipsam earum quam, in amet, nobis corrupti rem
+        omnis, voluptates aperiam libero fugiat praesentium placeat ipsum? Hic fugit esse minus?
+      </p>
+      <button>Read more</button>
+    </section>
+    <section class="post">
+      <img src="/src/assets/images/posts/Post thumbnail-2.png" class="thumbnailPic" alt="Post thumbnail" />
+      <h5>Wonderful Copenhagen 2021</h5>
+      <p class="fadedText">Published 12/07/2021</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nemo ipsam earum quam, in amet, nobis corrupti rem
+        omnis, voluptates aperiam libero fugiat praesentium placeat ipsum? Hic fugit esse minus?
+      </p>
+      <button>Read more</button>
+    </section>
+    <section class="post">
+      <img src="/src/assets/images/posts/Post thumbnail-3.png" class="thumbnailPic" alt="Post thumbnail" />
+      <h5>Wonderful Copenhagen 2021</h5>
+      <p class="fadedText">Published 12/07/2021</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nemo ipsam earum quam, in amet, nobis corrupti rem
+        omnis, voluptates aperiam libero fugiat praesentium placeat ipsum? Hic fugit esse minus?
+      </p>
+      <button>Read more</button>
+    </section>
+    <section class="post">
+      <img
+        src="/src/assets/images/posts/Post thumbnail-3.png"
+        class="thumbnailPic cropped-image"
+        alt="Post thumbnail"
+      />
+      <h5>Wonderful Copenhagen 2021</h5>
+      <p class="fadedText">Published 12/07/2021</p>
+    </section>
+    <hr />
+    <section class="postScroll">
+      <button>Previous</button>
+      <p>Page 1 of 3</p>
+      <button>Next</button>
+    </section>
+    <hr />
+    <!--posts-->
+    <section class="infoPost">
+      <h3>WBC Shop</h3>
+      <p>Your shopping cart is empty</p>
+      <button>Visit the shop</button>
+    </section>
+    <hr />
+    <section class="infoPost">
+      <h3>Next event</h3>
+      <h4>World Barista Cup 2021</h4>
+      <p>Copenhagen, Denmark</p>
+      <p>Dates : 25th - 27th August 2011</p>
+      <p>Theme : SENSORY</p>
+      <button>Sign up now</button>
+    </section>
+    <hr />
+    <section class="infoPost">
+      <h3>Scoreboard</h3>
+      <h4>List of winners from last year</h4>
+      <p>2021 - ?</p>
+      <p>2020 - Denmark</p>
+      <p>2021 - Sweden</p>
+      <p>2021 - Turkey</p>
+      <p>2021 - Italy</p>
+      <p>2021 - Italy</p>
+      <p>2021 - Germany</p>
+    </section>
+    <hr />
+    <h3 class="centerHeading">World Barista Cup Sponsors</h3>
+    <section class="sponsors">
+      <img src="/src/assets/images/sponsors/sponsor-1.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-2.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-3.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-4.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-5.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-6.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-7.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-8.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-9.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-10.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-11.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-12.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-13.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-14.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-15.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-16.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-17.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-18.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-19.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-20.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-40.png" alt="sponsor's logo" />
+      <img src="/src/assets/images/sponsors/sponsor-41.png" alt="sponsor's logo" />
+    </section>
+    <footer>
+      <img class="logo" src="/src/assets/logo-white.svg" alt="logo" />
+      <section class="some">
+        <img src="/src/assets/icons/linkedin-white.svg" alt="linked in" />
+        <img src="/src/assets/icons/twitter-white.svg" alt="twitter" />
+        <img src="/src/assets/icons/instagram-white.svg" alt="instagram" />
+        <img src="/src/assets/icons/facebook-white.svg" alt="facebook" />
+      </section>
+      <hr class="lighterHr" />
+      <h4 class="lightHeading">About World Barista Cup</h4>
+      <p class="footerGreyText">The vision within</p>
+      <p class="footerGreyText">The World Barista Cup</p>
+      <p class="footerWhiteText">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolor aperiam omnis voluptates, officia dolorem at
+        repellat nihil itaque soluta architecto similique delectus culpa praesentium sed quas dolores distinctio eos.
+      </p>
+      <h4 class="lightHeading">Instagram feed</h4>
+      <section class="instagramGrid">
+        <img src="/src/assets/images/instagram-feed/instagram-image-1.png" alt="instagram picture" />
+        <img src="/src/assets/images/instagram-feed/instagram-image-2.png" alt="instagram picture" />
+        <img src="/src/assets/images/instagram-feed/instagram-image-3.png" alt="instagram picture" />
+        <img src="/src/assets/images/instagram-feed/instagram-image-4.png" alt="instagram picture" />
+        <img src="/src/assets/images/instagram-feed/instagram-image-5.png" alt="instagram picture" />
+        <img src="/src/assets/images/instagram-feed/instagram-image-6.png" alt="instagram picture" />
+        <img src="/src/assets/images/instagram-feed/instagram-image-7.png" alt="instagram picture" />
+        <img src="/src/assets/images/instagram-feed/instagram-image-8.png" alt="instagram picture" />
+        <img src="/src/assets/images/instagram-feed/instagram-image-9.png" alt="instagram picture" />
+      </section>
+
+      <h4 class="lightHeading">Contact</h4>
+      <h6 class="lightHeading">World Barista Cup</h6>
+      <p class="footerGreyText">Amagertorv 13</p>
+      <p class="footerGreyText">1160 Copenhagen K</p>
+      <p class="footerGreyText">+45 33 12 0 28</p>
+      <p class="footerGreyText">CVR: 11427693</p>
+      <p class="footerGreyText extraPadding">Email: info@worldbaristacup.com</p>
+    </footer>
+    <script src="script.js"></script>
+    <!--bootstrap-->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
